@@ -1,0 +1,37 @@
+
+<html lang="en" ng-app>
+    <head>
+      <meta charset="UTF-8" />
+      <title>Document</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+      <link type="text/css" rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+      <center><h1>Todo List</h1></center>
+      <div >
+        <div class="content">
+            
+          <div class="header">
+            <form action="">
+              <button type="submit" ng-click="addTodo()">
+                <span class="entypo-list-add"></span>
+              </button>
+            <input type="text" ng-model="todoFld" placeholder="Add todo here!"/>
+            </form>         
+          </div>
+
+          
+          <div class="todoItem" ng-repeat="todo in todos">
+            <span class="{{todo.done}}" contenteditable="true">{{todo.text}}</span>
+            <button ng-click="todos.splice($index, 1)">
+              <span class="">o</span>
+            </button>
+            <button ng-click="doneTodo($index)">
+              <span>x</span>
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </body>
+  </html>

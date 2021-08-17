@@ -1,4 +1,8 @@
 # todo
+# ToDoList 
+vue 
+Nuxt.js
+
 
 ## Project setup
 ```
